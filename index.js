@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true}));
 app.post('/save/stacks', db.createUser);
 
 
-app.get('/', (request, responce) => {
-    responce.json({message: "It works"});
+app.get('/', (request, response) => {
+    response.json({message: "It works"});
 });
 
 app.listen(port, () => {
