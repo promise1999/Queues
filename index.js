@@ -10,10 +10,11 @@ app.use(express.urlencoded({ extended: true}));
 //app.post('/', dbcreateUser);
 //app.post('/', db.stack);
 
-app.get('/', (request, responce) => {
-    responce.json({message: "It works"});
+app.get('/', (request, response) => {
+    response.json({message: "It works"});
 });
 
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log (`running on ${port}`);
 })
