@@ -9,17 +9,10 @@ const pool = new Pool({
 });
 
 const stack = new Stack();
-const createUser = async (request, responce, element) => {
-  let data, agentid, structureid;
-  if (element) {
-    data = element.data;
-    agentid = element.agentid;
-    structureid = element.structureid;
-  } else {
-    data = request.body.data;
-    agentid = request.body.agentid;
-    structureid = request.body.structureid;
-  }
+const createUser = async (request, responce) => {
+    const {data, agentid, structureid} = request.body
+    
+    //stack.push(.)
 
   pool.query(
     "INSERT INTO agent (data, agendid, structureid) VALUES ($1, $2, $3)",
