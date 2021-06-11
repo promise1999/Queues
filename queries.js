@@ -9,7 +9,7 @@ const pool = new Pool({
 });
 
 const stack = new Stack();
-const createUser = async (request, responce, element) => {
+const createUser = async (request, response, element) => {
   let data, agentid, structureid;
   if (element) {
     data = element.data;
